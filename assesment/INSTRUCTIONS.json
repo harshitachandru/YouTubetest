@@ -1,0 +1,295 @@
+{
+  "quality_eval": [
+    {
+      "is_enabled": true,
+      "min_limit": 3,
+      "max_limit": null,
+      "out": "Comment Check.You used {} comments, should be between {} < {}",
+      "indicator": "USED_COMMENT"
+    },
+    {
+      "is_enabled": true,
+      "min_limit": 1,
+      "max_limit": null,
+      "out": "WebDriverWait Check.You used {} waits, should be between {} < {}",
+      "indicator": "USED_WAIT"
+    },
+    {
+      "is_enabled": true,
+      "min_limit": null,
+      "max_limit": 20,
+      "out": "Sleep statement Check.You used {} sleep statements, should be between {} < {}",
+      "indicator": "USED_THREAD_SLEEP"
+    },
+    {
+      "is_enabled": true,
+      "min_limit": 3,
+      "max_limit": null,
+      "out": "System Out Printline or Logging Check.You used {} System out Printline statements, should be between {} < {}",
+      "indicator": "USED_SOPL"
+    }
+  ],
+  "instruction_set": [
+    {
+      "is_enabled": true,
+      "test_case_fe": "Test Case 1 - Travel to YouTube and check About page",
+      "test_case_hint": "Check TestNG Test `testCase01`",
+      "testng_test_name": "testCase01",
+      "chrome_log_assessment": [
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "Navigate"
+            },
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "youtube"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Navigated to the YouTube",
+          "hint": "Ensure that you navigated to YouTube"
+        },
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "GetElementText"
+            },
+            {
+              "object_notation": "RESPONSE",
+              "operator": "contains",
+              "expected_value": "About"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Printed the About text",
+          "hint": "Ensure that you moved to about page and printed the about messages"
+        }
+      ]
+    },
+    {
+      "is_enabled": true,
+      "test_case_fe": "Test Case 2 - Check the Film/Movies tab",
+      "test_case_hint": "Check TestNG Test `testCase02`",
+      "testng_test_name": "testCase02",
+      "chrome_log_assessment": [
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            },
+            {
+              "object_notation": "RESPONSE",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Clicked on the Films/Movies tab",
+          "hint": "Ensure that you clicked the film or movies tab"
+        },
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            },
+            {
+              "object_notation": "RESPONSE",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Clicked on the arrow to move the cards",
+          "hint": "Ensure that you clicked the arrows till they are not available anymore"
+        },
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "GetElementText"
+            },
+            {
+              "object_notation": "RESPONSE",
+              "operator": "contains",
+              "expected_value": "GetElementText"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Found the element to be compared: catogory and target audience",
+          "hint": "Ensure that you asserted the category and target audience"
+        }
+      ]
+    },
+    {
+      "is_enabled": true,
+      "test_case_fe": "Test Case 3 - Check the Music tab",
+      "test_case_hint": "Check TestNG Test `testCase03`",
+      "testng_test_name": "testCase03",
+      "chrome_log_assessment": [
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            },
+            {
+              "object_notation": "RESPONSE",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Clicked on the Music tab",
+          "hint": "Ensure that you clicked the music tab"
+        },
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            },
+            {
+              "object_notation": "RESPONSE",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Clicked on the arrow to move the cards",
+          "hint": "Ensure that you clicked the arrows till they are not available anymore"
+        },
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "GetElementText"
+            },
+            {
+              "object_notation": "RESPONSE",
+              "operator": "contains",
+              "expected_value": "GetElementText"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Found the element to be compared: tracks on the playlist",
+          "hint": "Ensure that you asserted the number of tracks on the playlist"
+        }
+      ]
+    },
+    {
+      "is_enabled": true,
+      "test_case_fe": "Test Case 4 - Check the News tab",
+      "test_case_hint": "Check TestNG Test `testCase04`",
+      "testng_test_name": "testCase04",
+      "chrome_log_assessment": [
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            },
+            {
+              "object_notation": "RESPONSE",
+              "operator": "contains",
+              "expected_value": "ClickElement"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Clicked on the News tab",
+          "hint": "Ensure that you clicked the news tab"
+        },
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "GetElementText"
+            },
+            {
+              "object_notation": "RESPONSE",
+              "operator": "contains",
+              "expected_value": "GetElementText"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Found the element to be add up: number of likes on a post",
+          "hint": "Ensure that you summed up the number of likes on each post"
+        }
+      ]
+    },
+    {
+      "is_enabled": true,
+      "test_case_fe": "Test Case 5 - Search Keywords",
+      "test_case_hint": "Check TestNG Test `testCase05`",
+      "testng_test_name": "testCase05",
+      "chrome_log_assessment": [
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "TypeElement"
+            },
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "Movies"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Typed 'Movies' into the search bar",
+          "hint": "Ensure that you searched 'Movies' from the data"
+        },
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "TypeElement"
+            },
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "Music"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Typed 'Music' into the search bar",
+          "hint": "Ensure that you searched 'Music' from the data"
+        },
+        {
+          "validations": [
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "TypeElement"
+            },
+            {
+              "object_notation": "COMMAND",
+              "operator": "contains",
+              "expected_value": "Games"
+            }
+          ],
+          "join": "AND",
+          "success_out": "Typed 'Games' into the search bar",
+          "hint": "Ensure that you searched 'Games' from the data"
+        }
+      ]
+    }
+  ]
+}
