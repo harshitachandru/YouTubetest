@@ -90,7 +90,11 @@ def construct_log_json(log_text):
     log_frame=""
     log_object_frame={"COMMAND":None, "RESPONSE":None}
     selector = None
-    for line in open(log_text):
+
+    with open(log_text, 'r', encoding='utf-8') as file:
+        lines = [line.strip() for line in file.readlines()]
+
+    for line in lines:
         if('[INFO]' in line and 'COMMAND' in line ):
             if ("COMMAND ExecuteScript" not in str(log_object_frame)):
                 LOG["actions"].append(log_object_frame)
